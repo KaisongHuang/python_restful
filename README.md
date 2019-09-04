@@ -2,9 +2,9 @@
 
 I'm trying to build a restful API using flask.
 
-### Setup environment
-1. flask
-2. nginx
+## Setup environment
+### 1. flask
+### 2. nginx
 ```
 cd /etc/nginx/sites-enabled/
 sudo vim flaskapp
@@ -20,8 +20,8 @@ server{
         }
 }
 ```
-3. gunicorn
+### 3. gunicorn
 ```
 gunicorn helloworld:app
 ```
-4. change security rules on EC2 console, add `HTTP` & `HTTPS` in `inbound` rules
+### 4. change security rules on EC2 console, add `HTTP` & `HTTPS` in `inbound` rules
