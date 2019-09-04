@@ -13,7 +13,7 @@ add config below:
 ```
 server{
         listen 80;
-        server_name 3.17.147.251;
+        server_name <public ipv4 addr>;
 
         location / {
                 proxy_pass http://127.0.0.1:8000;
