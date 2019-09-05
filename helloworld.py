@@ -33,7 +33,7 @@ def student():
 		lastName = request.json.get('Last name', "")
 		age = int(request.json.get('Age', "18"))
 		cur = mysql.connection.cursor()
-		cur.execute("INSERT INTO students(firstname, lastname, age) VALUES (%s, %s, %i)", (firstName, lastName, age))
+		cur.execute("INSERT INTO students(firstname, lastname, age) VALUES (%s, %s, %s)", (firstName, lastName, age))
 		mysql.connection.commit()
 		cur.close()
 		student = {
