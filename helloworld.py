@@ -61,5 +61,15 @@ def student():
 		return jsonify({'students': students})
 
 
+@app.route('/student/<id>', methods=['DELETE'])
+def delete(id):
+	cur = mysql.connection.cursor()
+	cur.execute("DELETE FROM students WHERE id="+id)
+	mysql.connection.commit()
+	cur.close()
+	
+	return "success"	
+
+
 if __name__ == '__main__':
 	app.run()
