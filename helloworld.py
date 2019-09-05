@@ -51,7 +51,7 @@ def student():
 		students = []
 		for row in res:
 			student = {
-				'id': row[0],
+				'ID': row[0],
 				'Firt name': row[1],
 				'Last name': row[2],
 				'Age': row[3]
